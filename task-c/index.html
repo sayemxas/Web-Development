@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Multimedia Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+        Author: Nayeem Hossain Sayem
+        Date: 2025-10-02
+        */
+
+        /* Apply custom rules to ensure specific centering and max-width requirements are met */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+
+        .media-container {
+            /* 2. Center the content area */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center block elements inside the container */
+        }
+
+        .media-section {
+            width: 100%;
+            /* 3. Add spacing between sections */
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .media-element {
+            /* Elements like audio/video/img will inherit this, aiding centering */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .media-element.image-item {
+            /* 1. Limit the image width to 100% with max-width: 500px */
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-element.audio-item {
+            width: 100%;
+            max-width: 500px;
+        }
+        .media-element.video-item {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="media-container">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-gray-800">My Multimedia Showcase</h1>
+        </header>
+
+        <section class="media-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Creative Commons Image</h2>
+            <img 
+                class="media-element image-item"
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="A beautiful sunset over a large mountain lake with reflections"
+            >
+        </section>
+
+        <section class="media-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Embedded Audio Clip</h2>
+            <audio controls class="media-element audio-item">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section class="media-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Embedded Video Clip</h2>
+            <video controls class="media-element video-item">
+                <source src="https://cdn.pixabay.com/video/2024/06/20/217490_large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="media-section border-none pt-4">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Media Source and Licensing</h2>
+            <p class="text-gray-600 text-base max-w-xl mx-auto leading-relaxed text-center">
+                The image is sourced from pexels, available under the Pixabay License (similar to CC0/Public Domain), meaning it is free for commercial use and no attribution is required. 
+                The audio clip ("SoundHelix Song 1") is provided by SoundHelix and is licensed under the Creative Commons Attribution 3.0 License. 
+                The video clip is a sample from Pixabay, also under the Pixabay License.
+                I have chosen media with permissive licenses to ensure legal use in this project.
+            </p>
+        </section>
+
+    </div>
+</body>
+</html>
