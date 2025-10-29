@@ -1,0 +1,143 @@
+/* 🎨 Color Palette */
+:root {
+  --page-bg: #fcfdfc;
+  --text: #2a2a2a;
+  --brand: #6c4f8d;
+  --table-alt: #f9f5ff;
+  --border: #e0e0e0;
+}
+
+/* 🌐 Base Page Styling */
+body {
+  background-color: var(--page-bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+/* 📋 Layout Sections */
+.top-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.student-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.controls {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* 🧱 Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* 🗓️ Days Group */
+.days-group {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.days-group label {
+  margin-right: 0.75rem;
+}
+
+/* 🖱️ Buttons */
+.btn {
+  background-color: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--border);
+  color: var(--text);
+}
+
+/* 🧾 Table */
+.table-wrap {
+  overflow-x: auto; /* for smaller screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+  width: 20%;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-alt);
+}
+
+th {
+  background-color: var(--brand);
+  color: #fff;
+}
+
+/* 💡 Responsive Adjustments */
+@media (max-width: 700px) {
+  .top-grid {
+    flex-direction: column;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+}
